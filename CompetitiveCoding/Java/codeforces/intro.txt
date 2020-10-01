@@ -1,0 +1,4 @@
+Presently all the solutions of the codeforces after the contests are posted in C++ there are people who try solving it in java.
+This folder gives the solutions in java at a single place rather than filtering it for all the submitted solutions seperately.
+If a folder for a particular contest no is not present create a folder and try to add the solutions in that respective folder.
+
