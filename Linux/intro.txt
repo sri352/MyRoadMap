@@ -1,0 +1,1 @@
+This Folder is for understanding basic linux commands, having different scripts for automation etc.
