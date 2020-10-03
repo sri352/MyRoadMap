@@ -55,12 +55,51 @@ public void basicArrayListMethodsAndOperations(){
 
     arrList.set(index,123); //change the value of a element at specified index
 
-    arrList.add(index,456); //addind a new element at specified index
+    arrList.add(12); //adds the object at the end of the list
+
+    arrList.clear() // removes all the elements if the list
+
+    arrList.add(index,456); //adding a new element at specified index
+
+    arrList.contains(123); // returns boolean if the element is present
 
     Object[] objArr = arrList.toArray(); //Converting the list to an array
 
     stringArrList.indexOf("hello"); //returns the index of first occurence of the given object or -1
 
     stringArrList.lastIndexOf("hello"); //returns the index of last occurence of the given object or -1
+
+    Collections.sort(arrList);
+
+    Collections.sort(arrList,Collections.reverseOrder());
+
+    //streams are one of the most useful java feature
+
+    arrList.stream().distinct().count(); // get all the distinct elements in the arrayList
+
+    arrList.stream().filter(a-> a!=456).sorted().collect(Collectors.toList()); 
+    // can pass comparator to the sorted and pass predicate to the filter method
+
+}
+
+public void basicHeapMethodsAndOpertations{
+    
+    PriorityQueue<Integer> minHeap = new PriorityQueue<>(); // min heap
+
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
+    //basic operations
+
+    heap.add(12); //O(logN)
+
+    heap.peek(); // return the peak element but not remove it from the heap O(1)
+
+    heap.remove(); // return and remove an element of the heap
+
+    heap.poll(); // remove the peek element from the heap O(logN)
+
+    heap.contains(12); //returns true if the heap contains the object
+
+    heap.clear(); //removes all the elements of the heap
 
 }
