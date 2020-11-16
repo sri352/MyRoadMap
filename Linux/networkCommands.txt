@@ -1,0 +1,143 @@
+INTERFACE CONFIGURATION FILES 
+
+file-> /etc/nsswitch.conf -> tells the os where to the get the files of the configuration to the specific usecase
+
+file-> /etc/hosts -> add the ip addess to the specific hostname etc for example localhost is defined in this file
+
+directory-> /etc/sysconfig/network-scripts  -> contains the default configuration files for the Interfaces for example dhcp can be                                              removed in the Ifcfg-ensp03 and change the boot protocol to static ip here 
+
+file-> /etc/resolv.conf  -> nameserver details for where to get the ipaddress of the specific hostname
+
+NETWORK COMMANDS
+
+ping -> check the connectivity or if the service is up or not
+
+ifconfig -> get the configurations of the interfaces present on your system
+
+netstat -rnv -> get the gateway and traffic flow details
+
+tcpdump -i ensp03 -> traces every transaction that is coming and going out of the machine on a particular interface
+
+wget <link to the file> -> will save the file in the pwd. eg: wget www.google.com -> saves the html file returned
+
+curl to see if the page is up. ping to see if the server is up
+
+curl www.google.com -> gets the html page  can use wget also same purpose
+
+#########
+
+FTP (file transfer protocol) 
+
+-> on server
+
+default port :21 
+the server should be running the ftpd (deamon service for ftp)
+
+includes various steps to install the ftp deamon service, start it, enable firewall for it etc
+
+vi /etc/vsftpd/vsftpd.conf  -> configuration file
+
+ -> on client
+
+yum install ftp
+
+ftp <ipofserver>
+enter username and password
+bin
+hash -> show progress
+put <filename>
+bye
+
+##########
+
+SCP (secure copy protocol)
+
+copy file from one system to other with extra security and authentication
+
+default SCP port = SSH default port :22
+
+scp <file> <username>@<ip>:<destination folder>
+
+############
+
+rsync (Remote Synchronization)
+
+utility to sync files by comparing the modification times and sizes
+
+used for backup
+
+faster than ftp and scp
+
+default same as ssh :22
+
+only transfers the changes in the file, doesnt transfer the unchanges part
+
+yum install rsync (centos/redhat)
+apt-get install rsync (ubuntu/debian)
+
+rsync options source destination
+
+rsync directory (local -> local) -> rsync -azvh /home/<username> /tmp/backups
+
+rsync file (local -> remote) -> rsync -avz <filename> <username>@<ip>:<destination path>
+
+rsync file (remote -> local) -> rsync -avzh <username>@<ip>:<server file path> <destination local path>
+
+
+###########
+
+System updates and repos
+
+when you do yum install something first the os checks the /etc/yum.repos.d file for the url link to the repo
+
+rpm (redhat package manager)
+
+yum remove <packageName>
+
+############
+
+Two types of upgrades
+1) Major version
+2) Minor version 7.3 -> 7.4
+
+minor update can be done using the yum command
+
+yum update -y -> default y for all the questions
+
+upgrade deletes the older package and install the new package
+
+update preserves the older package in order for some application to works with the older version
+
+############
+
+nslookup
+
+Server:         192.168.0.1
+Address:        192.168.0.1#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 142.250.67.36
+
+dig +short www.google.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
