@@ -20,3 +20,4 @@ sudo apt install openssh-server
 linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04 systemctl status ssh
 sudo ufw allow ssh
 ln -s <Source> <Destination> adding symbolic link
+add username in remote in ./.git/config https://username@url for git not asking the password multiple times
