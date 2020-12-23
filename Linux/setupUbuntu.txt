@@ -1,0 +1,21 @@
+sudo apt install zsh
+zsh 5.8 /usr/bin/zsh
+chsh -s shellpath
+sudo apt --purge remove zsh
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+sudo apt install code
+https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-20-04/
+sudo apt install git
+https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-20-04/
+sudo apt-get install python3-pip
+sudo apt update
+the above pip3 install should install all the required build-essential plans also which will instal the gcc, g++ etc
+for manually installing build-essential sudo apt install build-essential
+sudo apt-get install manpages-dev for install the manual pages about using GNU/Linux for development
+for adding multiple versions of gcc or g++ https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/
+sudo apt install net-tools
+sudo apt install openssh-server
+linuxize.com/post/how-to-enable-ssh-on-ubuntu-20-04 systemctl status ssh
+sudo ufw allow ssh
