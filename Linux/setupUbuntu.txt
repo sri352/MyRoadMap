@@ -25,4 +25,7 @@ For a linux user adding the ssh keys cloning using ssh provides easier and bette
 https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
 git clone <ssh link> for cloning using ssh
 ssh-keygen -t ed25519 -C email@example.com
-https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
+sudo add-apt-repository universe //for checking whether Universe repo is enabled or not
+sudo apt install gnome-tweak-tool
+gnome-tweaks
+https://linuxhint.com/gnome_tweak_installation_ubuntu/   for some extra extensions battery indicators etc
