@@ -36,3 +36,5 @@ sudo apt autoremove or apt-get
 sudo apt-get fbreader for epubs lightweight
 sudo apt-get clean to remove the older update packages if any
 du -sh /var/cache/apt/archives to check for the size of the all the previous update files clean clears this folder
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb downloading chrome
+sudo apt install ./google-chrome-stable_current_amd64.deb
