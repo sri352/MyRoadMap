@@ -29,3 +29,10 @@ sudo add-apt-repository universe //for checking whether Universe repo is enabled
 sudo apt install gnome-tweak-tool
 gnome-tweaks
 https://linuxhint.com/gnome_tweak_installation_ubuntu/   for some extra extensions battery indicators etc
+sudo apt install vim-gtk3
+sudo apt-get install calibre for viewing epubs in ubuntu
+select-editor choose default editor for crontab or anyothers i think
+sudo apt autoremove or apt-get
+sudo apt-get fbreader for epubs lightweight
+sudo apt-get clean to remove the older update packages if any
+du -sh /var/cache/apt/archives to check for the size of the all the previous update files clean clears this folder
