@@ -1,0 +1,20 @@
+Ever wondered what are the source programs for the basic core commands of unix that we use in the daily life, the following links have the answer to your questions.
+
+
+https://stackoverflow.com/questions/11528267/how-do-i-read-the-source-code-of-shell-commands
+
+
+http://git.savannah.gnu.org/cgit/coreutils.git/tree/src
+
+
+github link for the above mirror link -> https://github.com/coreutils/coreutils
+
+
+
+https://www.gnu.org/software/coreutils/
+
+
+For understanding the design and structure of the  same http://www.maizure.org/projects/decoded-gnu-coreutils/
+
+
+

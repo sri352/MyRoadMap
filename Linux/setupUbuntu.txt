@@ -38,3 +38,5 @@ sudo apt-get clean to remove the older update packages if any
 du -sh /var/cache/apt/archives to check for the size of the all the previous update files clean clears this folder
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb downloading chrome
 sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt install xdotool >> for adding a show desktop feature in ubuntu
+https://www.debugpoint.com/2019/02/how-add-show-desktop-icon-ubuntu/ for adding the show desktop app continuation for the above, nicely put
