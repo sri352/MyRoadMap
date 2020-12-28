@@ -40,3 +40,14 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb d
 sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt install xdotool >> for adding a show desktop feature in ubuntu
 https://www.debugpoint.com/2019/02/how-add-show-desktop-icon-ubuntu/ for adding the show desktop app continuation for the above, nicely put
+sudo apt install finger
+sudo apt install cinnamon >> changing the desktop environment to cinnamon
+sudo apt remove cinnamon >> removing the same
+sudo apt install gparted
+adduser testuser
+usermod -aG sudo testuser
+su - testuser
+chsh -s /usr/bin/zsh
+logout and login back
+alternatively the default shell can be changed in the passwd file also 
+https://github.com/romkatv/powerlevel10k#manual
