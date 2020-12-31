@@ -51,3 +51,9 @@ chsh -s /usr/bin/zsh
 logout and login back
 alternatively the default shell can be changed in the passwd file also 
 https://github.com/romkatv/powerlevel10k#manual
+kernel development
+https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
+sudo apt-get install libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
+sudo gdisk /dev/sdb, formatting creating partitions etc from the command line, can also be used to change the table partitions MBR->GPT vice-versa 
+lsblk for the list
+sudo apt install mlocate -> too add the locate command which creates a db and all the files for fast search
