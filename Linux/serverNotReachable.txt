@@ -1,0 +1,70 @@
+Obviously we start with the ping command
+
+1) ping google.com
+
+if you know the ip of the server you want to connect to
+
+2) ping 142.250.71.24
+
+
+if you don't know the ip of the server you are connecting to 
+
+3) nslookup google.com
+
+Name:	google.com
+Address: 142.250.71.14
+Name:	google.com
+Address: 2404:6800:4007:806::200e
+
+
+you should be getting a response as above with the resective url. 
+
+If you didnt get the required ip your problem is with the dns resolution contact or change your dns settings for you domain name accordingly.
+
+4) cat /etc/hosts
+
+check the /etc/hosts file local for the local entry dns settings of the system if someone added a hardcoded value for the respective url
+
+5) cat /etc/resolv.conf
+
+this is the file where the ip of the configured dns server is stored. 
+
+6) cat /etc/nsswitch.conf
+
+checks the order in which the dns name resolution should take place.
+
+For example:
+
+the file will have a line saying this
+hosts:  files dns
+
+which means first it will check the corresponding ip in the files(/etc/hosts) file then if it doesnt find something then it will go to the dns server(/etc/resolv.conf) ip.
+
+7)ifconfig
+
+check if your system has an ip resolved 
+
+8) netstat -rnv
+
+check if you are able to ping the gateway, which should be available from the above command.
+
+If this is not set there might be something wrong with the routing tables then you have configure them accordingly.
+
+
+
+The above cases work fine if the server is down but what to do if the application it self is down
+
+if pingable check if the application or service is down with certain port->  telnet ip port
+
+telnet 142.250.71.14 443
+
+443 for https and 80 for http 22 for ssh are the main things
+
+is you get a message saying connected to the certain IP which says that the service running on the port is active 
+
+if its not working may be the http,ssh or whatever service is not working
+
+ps -ef <ServiceName>
+
+
+
