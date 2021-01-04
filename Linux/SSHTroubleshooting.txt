@@ -1,0 +1,46 @@
+There are various reasons when you are not able to connect to a remote server using ssh
+
+1) telnet <ip> 22 (mostly)
+
+first check wether the sshd is running on the server or not using the above command
+
+ps -ef | grep sshd just info on how to check if sshd is running if someome is already logged into the server.
+
+2) cat /etc/ssh/sshd_conf
+
+this files contains the configuration of the sshd, on which port to run, etc.
+
+It also contains a field PermitRootLogin which is mostly disabled on many servers for security purposes. Check if you are tyring to login as root.
+
+cat /var/log/secure -> has all the logs on who is logging into the server including failed attempts etc  for fedora and similar distros.
+cat /var/log/auth.log -> for deb distros.
+
+check if there is a default shell assigned to the specific user in the /etc/passwd file.
+
+all the accounts which have the /sbin/nologin wont be able to login too.
+
+
+in prod and staging servers we always have a fixed no of login attempts that is achievable by the pam.d settings
+
+you can read more about it in the following article o how to set it up, how to unlocked the locked user etc.
+https://www.linuxtechi.com/lock-user-account-incorrect-login-attempts-linux/
+
+we have already used telnet in the previous and this article lets see what it does
+
+telnet -> teletype network protocal
+
+as we have used before we can check if the specific port is open or closed on the servers
+
+you could say that telnet is as same as ssh but without the encryption
+
+generally the telnet is configured on the port no 23
+
+A good video explaining the same
+
+https://www.youtube.com/watch?v=2JjILZPOC5g
+
+difference between the telnet and ssh
+
+https://www.youtube.com/watch?v=tZop-zjYkrU
+
+Couldnt find any decent article stating how telnet checks if the port is open or not, If you find something please do contribute.
