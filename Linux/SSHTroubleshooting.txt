@@ -44,3 +44,29 @@ difference between the telnet and ssh
 https://www.youtube.com/watch?v=tZop-zjYkrU
 
 Couldnt find any decent article stating how telnet checks if the port is open or not, If you find something please do contribute.
+
+how the logs look like in the auth.log or the secure log during login 
+
+Successful Login 
+
+Jan  4 22:56:06 thope-Inspiron-5570 sshd[5849]: Accepted password for thope from 192.168.1.100 port 51500 ssh2
+Jan  4 22:56:06 thope-Inspiron-5570 sshd[5849]: pam_unix(sshd:session): session opened for user thope by (uid=0)
+Jan  4 22:56:06 thope-Inspiron-5570 systemd-logind[882]: New session 7 of user thope.
+
+
+Logout
+
+Jan  4 22:58:15 thope-Inspiron-5570 sshd[5913]: Received disconnect from 192.168.1.100 port 51500:11: disconnected by user
+Jan  4 22:58:15 thope-Inspiron-5570 sshd[5913]: Disconnected from user thope 192.168.1.100 port 51500
+Jan  4 22:58:15 thope-Inspiron-5570 sshd[5849]: pam_unix(sshd:session): session closed for user thope
+Jan  4 22:58:15 thope-Inspiron-5570 systemd-logind[882]: Session 7 logged out. Waiting for processes to exit.
+Jan  4 22:58:15 thope-Inspiron-5570 systemd-logind[882]: Removed session 7.
+
+Failed Login
+
+Jan  4 22:59:20 thope-Inspiron-5570 sshd[6151]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.100  user=thope
+Jan  4 22:59:22 thope-Inspiron-5570 sshd[6151]: Failed password for thope from 192.168.1.100 port 51524 ssh2
+
+
+
+
