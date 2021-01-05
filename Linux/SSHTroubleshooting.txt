@@ -45,6 +45,10 @@ https://www.youtube.com/watch?v=tZop-zjYkrU
 
 Couldnt find any decent article stating how telnet checks if the port is open or not, If you find something please do contribute.
 
+for adding ssh keys in the servers for diffrent types of ssh
+
+https://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/
+
 how the logs look like in the auth.log or the secure log during login 
 
 Successful Login 
