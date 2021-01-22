@@ -1,0 +1,28 @@
+Two main configuration terms are directive and context
+
+Directives are nothing but specific configuration options, which means they contain a name and value
+
+
+Context is nothing but a scope has a nested scope etc
+
+http {
+    include       mime.types;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+In the above example root, index, listen etc are directives, whereas server, http , location are the contexts.
+
+
+The inner contexts inherit properties from the parent context.
+

@@ -59,3 +59,4 @@ lsblk for the list
 sudo apt install mlocate -> too add the locate command which creates a db and all the files for fast search
 sudo apt install python3-venv
 sudo apt install libmpfr-dev libmpc-dev libgmp-dev python3-gmpy2 needed these for while reading some pratical cyrptography in python book
+sudo apt install curl

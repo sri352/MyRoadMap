@@ -1,0 +1,67 @@
+to install in Ubuntu
+
+apt-get isntall nginx
+
+to install in centos or related distros
+
+yum install epel-release
+
+yum install nginx
+
+service nginx start
+
+ps aux | grep nginx to check if the nginx process has started
+
+Installing through source code
+
+nginx.org -> download
+
+wget http://nginx.org/download/nginx-1.19.6.tar.gz
+
+tar -zxvf nginx-1.19.6.tar.gz 
+
+cd nginx-1.19.6/
+
+sudo apt-get install build-essential
+
+sudo apt-get install libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev
+
+./configure --sbin-path=/usr/bin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --with-pcre --pid-path=/var/run/nginx.pid --with-http_ssl_module
+
+make
+
+make install
+
+
+check the installation with (nginx -v) and check if the conf files etc have been created
+
+nginx -h for the help
+
+nginx -s stop for the stop signal
+
+nginx -s reload for the reload signal
+
+we will be using the same signals in the nginx.service file in the systemd conf
+
+
+https://www.nginx.com/resources/wiki/start/topics/examples/systemd/ for adding the nginx to systemd more standardised way of starting and stopping services
+
+change the paths in the file according to the paths in which you configured the above before install
+
+systemctl start nginx
+systemctl stop nginx
+systemctl reload nginx
+
+
+Once the master and the worker processes start you can see the nginx welcome page in the browser in localhost
+
+
+
+If you don't understand the concept of installing the programs through source code, like what is configure, make, Makefile etc you can read about it in this link https://thoughtbot.com/blog/the-magic-behind-configure-make-make-installation in a short way
+
+
+
+
+
+
+
