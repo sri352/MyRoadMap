@@ -1,0 +1,39 @@
+We always have  multiple versions of same thing, its always a hassle on how to manage it
+
+update-alternatives providies a way it.
+
+lets say you have both python2 and python3 installed, and based on some priority you want to used the selected one by python
+
+you can install them using the sudo apt install python2 python3
+
+sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python2 20
+
+sudo update-alternatives --install /usr/local/bin/python python /usr/bin/python3 30
+
+you can add them to the new path in the usr/local/bin/python with the respective  paths to the original ones where 20 30 are the respective priorities to that 
+
+you can look at the config of it from update-alternatives --query python, which shoukd give you an output like below
+
+Name: python
+Link: /usr/local/bin/python
+Status: auto
+Best: /usr/bin/python3
+Value: /usr/bin/python3
+
+Alternative: /usr/bin/python2
+Priority: 20
+
+Alternative: /usr/bin/python3
+Priority: 30
+
+when the status is auto the command or path with the highest priority is considered
+
+You can switch between the auto and manual modes by using the sudo update-alternatives --config python
+
+you can remove one of the update-alternatives using update-alternatives --remove python /usr/bin/python2
+
+sudo update-alternatives --remove-all python to remove all the alternatives of it
+
+https://linuxhint.com/update_alternatives_ubuntu/ the above content is followed from this article
+
+the same can be sued for java also and any other own self scripts etc.
