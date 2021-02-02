@@ -36,4 +36,4 @@ sudo update-alternatives --remove-all python to remove all the alternatives of i
 
 https://linuxhint.com/update_alternatives_ubuntu/ the above content is followed from this article
 
-the same can be sued for java also and any other own self scripts etc.
+the same can be used for java also and any other own self scripts etc.

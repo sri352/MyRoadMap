@@ -1,0 +1,42 @@
+free -m //memory in MB
+free -h // memory in GB
+
+dmesg | grep -i "out of memory"
+
+grep -i "out of memory" /var/log/messages
+
+cat /etc/sysctl.conf // memory commitment config file
+
+The top command
+load avg is for 5 ,10, 15 mins respectively
+
+for the %cpu 
+us is the user
+sy is the system
+ni is nice command by which you can prioritize certain processes
+id is the idle time
+wa is the waiting time
+hi is the hardware interrupts
+si is the softwater interrupts
+
+The same of free -m will be there in top also;
+
+PID processId
+user user
+PR priority
+NI nice Value
+VIRT virtual memory used by the process
+RES resident size (how much actual physical memory a process is consuming)
+SHR shared memory (two similar process share that like if you are running two top commands in diffretnt termials you will be able to see the shared memory in that)
+S status of the process s-sleeping R- running z- zombie 
+%cpu used by the process
+%mem used by the process
+time the amount of time the process is being from
+
+
+ps -ef | grep <PID>
+ps -ef | grep <command>
+
+kill, service, systemctl
+
+

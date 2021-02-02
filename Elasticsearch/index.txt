@@ -1,0 +1,15 @@
+Data is stored as documents, similar to row in sql.
+
+documents have fields which corresponds to row in sql
+
+Querying is done through rest api's.
+
+Written in java.
+
+Known for ease of use and scalability.
+
+
+https://www.elastic.co/guide/en/elasticsearch/reference/7.10/deb.html#deb-repo
+
+installing in ubuntu
+

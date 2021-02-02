@@ -61,3 +61,5 @@ sudo apt install python3-venv
 sudo apt install libmpfr-dev libmpc-dev libgmp-dev python3-gmpy2 needed these for while reading some pratical cyrptography in python book
 sudo apt install curl
 sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dkms
+https://www.digitalocean.com/community/tutorials/nodejs-node-version-manager for maintaing multiple versions of node
+you can see the update-alternative file on how to manage multiple versions of python

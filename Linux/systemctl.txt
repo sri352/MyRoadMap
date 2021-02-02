@@ -1,0 +1,27 @@
+ps -p 1 
+to check wether you use the systemd or not
+
+systemctl enable name.service
+
+systemctl disable name.service
+
+systemctl status name.service
+
+systemctl is-enabled name.service
+
+systemctl list-unit-files --type service
+
+systemctl start name.service
+
+systemctl stop name.service
+
+systemctl cat name // will give the conf file of the specific program
+
+systemctl reboot
+
+.service can be ignored
+
+unit files in /lib/systemd/system or /etc/systemd/service or usr/lib/systemd/system or /run/systemd/system
+
+systemctl list-units --type=service
+
