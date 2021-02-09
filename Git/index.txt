@@ -1,0 +1,8 @@
+Deep diving into the book pro Git.
+
+Different files in which git config is stored.
+
+1) /etc/gitconfig
+2) ~/.gitconfig
+3) .git/config // this is in the respective git directory
+
