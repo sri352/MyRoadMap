@@ -1,4 +1,6 @@
 sudo apt install zsh
+sudo apt install zsh-syntax-highlighting
+sudo apt install zsh-autosuggestions
 zsh 5.8 /usr/bin/zsh
 chsh -s shellpath
 sudo apt --purge remove zsh
