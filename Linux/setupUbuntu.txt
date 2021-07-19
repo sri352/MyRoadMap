@@ -65,3 +65,7 @@ sudo apt install curl
 sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dkms
 https://www.digitalocean.com/community/tutorials/nodejs-node-version-manager for maintaing multiple versions of node
 you can see the update-alternative file on how to manage multiple versions of python
+sudo apt-get install haskell-platform
+pip install jupyterlab -U // for upgrade
+sudo apt-get install octave
+sudo apt instlal lvm2
